@@ -9,7 +9,7 @@ import { authConfig } from './sso.config';
 })
 export class AppComponent {
   constructor(private oauthService: OAuthService) {
-    this.configureSingleSignOn();
+    // this.configureSingleSignOn();
   }
 
   configureSingleSignOn() {
