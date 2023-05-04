@@ -1,11 +1,53 @@
 <div class="topnav">
-  <a class="active" routerLink="/welcome">Keycloak SSO Demo 1</a>
+  <a class="active" routerLink="/welcome">Keycloak SSO Demo 2</a>
+  <ul>
+    <li>
+      <rux-monitoring-icon
+        icon="altitude"
+        status="normal"
+        sublabel="Monitoring"
+      ></rux-monitoring-icon>
+    </li>
+    <li>
+      <rux-monitoring-icon
+        icon="altitude"
+        status="normal"
+        sublabel="Foobar"
+      ></rux-monitoring-icon>
+    </li>
+    <li>
+      <rux-monitoring-icon
+        icon="altitude"
+        status="normal"
+        notifications="1"
+        sublabel="Stuff"
+      ></rux-monitoring-icon>
+    </li>
 
-  <rux-button-group h-align="right">
-    <rux-button secondary="" *ngIf="token" (click)="showInfo()">{{
-      username
-    }}</rux-button>
-    <rux-button *ngIf="!token" (click)="login()">Login</rux-button>
-    <rux-button (click)="logout()">Logout</rux-button>
-  </rux-button-group>
+    <li>
+      <div class="toolbar-icon">
+        <span class="user">
+          <rux-icon size="2.5rem" icon="person-outline"></rux-icon>
+        </span>
+        <span class="admin">
+          <rux-icon size="1rem" icon="add"></rux-icon>
+        </span>
+        <span class="explorer">
+          <rux-icon size="1rem" icon="explicit"></rux-icon>
+        </span>
+      </div>
+      <div class="sublabel">
+        <span>Settings</span>
+      </div>
+    </li>
+
+    <li>
+      <rux-monitoring-icon
+        icon="altitude"
+        status="standby"
+        notifications="1"
+        sublabel="Settings"
+      ></rux-monitoring-icon>
+    </li>
+  </ul>
 </div>

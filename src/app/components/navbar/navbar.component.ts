@@ -10,8 +10,11 @@ import { authConfig } from 'src/app/sso.config';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  constructor(private oauthService: OAuthService, private router: Router) {}
+  constructor(private oauthService: OAuthService, private router: Router) {
+    this.notificationCountDean = 0;
+  }
   username: string = '';
+  notificationCountDean: number = 0;
 
   ngOnInit(): void {
     this.configureSingleSignOn();
@@ -19,6 +22,8 @@ export class NavbarComponent implements OnInit {
     this.username = userClaims.preferred_username
       ? userClaims.preferred_username
       : '';
+    let token: any = this.oauthService.getAccessToken();
+    console.log('TOKEN:' + token);
   }
 
   configureSingleSignOn() {

@@ -16,7 +16,66 @@
     color: black;
   }
   a.active {
-    background-color: #04aa6d;
+    background-color: #cdba11;
     color: white;
   }
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    // list-style-type: none;
+    align-items: stretch;
+
+    li {
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+      cursor: pointer;
+      width: 76px;
+
+      .toolbar-icon {
+        display: flex;
+        justify-content: center;
+        line-height: 0;
+
+        .user rux-icon::part(icon) {
+          position: relative;
+          left: 30%;
+        }
+        .admin rux-icon::part(icon) {
+          position: relative;
+          top: -0.25rem;
+          right: -0.25rem;
+        }
+        .explorer rux-icon::part(icon) {
+          position: relative;
+          top: 1.5rem;
+          right: 0.75rem;
+        }
+      }
+      .sublabel {
+        font-size: 0.75rem;
+        line-height: var(--line-height-sm);
+        text-align: center;
+        letter-spacing: (--font-body-3-letter-spacing);
+      }
+    }
+  }
+}
+
+// rux-monitoring-icon {
+//   --status-symbol-color-fill-normal-on-dark: orange;
+// }
+
+rux-monitoring-icon::part(status-icon) {
+  display: none;
+}
+
+rux-monitoring-icon::part(icon) {
+  // height: 20px !important;
+  // width: 20px !important;
+  // color: red !important;
+}
+
+rux-monitoring-icon ::ng-deep .rux-advanced-status {
+  color: orange;
 }
