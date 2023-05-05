@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "micro-bundle": "ng build --output-hashing none && node ./concat.js"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +23,7 @@
     "@astrouxds/tokens": "^1.5.0",
     "angular-oauth2-oidc": "^15.0.1",
     "angular-oauth2-oidc-jwks": "^15.0.1",
+    "concat": "^1.0.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

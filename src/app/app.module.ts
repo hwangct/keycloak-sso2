@@ -21,8 +21,9 @@ import { RuxClassificationMarking } from '@astrouxds/astro-web-components/dist/c
 //import { AstroComponentsModule } from '@astrouxds/angular';
 
 @NgModule({
-  declarations: [AppComponent],
+  //declarations: [AppComponent],
   imports: [
+    AppComponent,
     BrowserModule,
     CommonModule,
     AppRoutingModule,
@@ -32,7 +33,7 @@ import { RuxClassificationMarking } from '@astrouxds/astro-web-components/dist/c
     WelcomeComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  //bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {

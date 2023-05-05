@@ -9,9 +9,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  // standalone: true,
-  // imports: [NavbarComponent, NgIf, RouterOutlet],
-  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  standalone: true,
+  imports: [NavbarComponent, NgIf, RouterOutlet],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppComponent {
   constructor(private oauthService: OAuthService) {
