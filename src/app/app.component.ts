@@ -4,13 +4,14 @@ import { authConfig } from './sso.config';
 import { RouterOutlet } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { MicroBannerComponent } from './components/micro-banner/micro-banner.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [NavbarComponent, NgIf, RouterOutlet],
+  imports: [MicroBannerComponent, NavbarComponent, NgIf, RouterOutlet],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppComponent {

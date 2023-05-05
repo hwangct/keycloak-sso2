@@ -37,16 +37,16 @@
         justify-content: center;
         line-height: 0;
 
-        .user rux-icon::part(icon) {
+        .user rux-icon-micro::part(icon) {
           position: relative;
           left: 30%;
         }
-        .admin rux-icon::part(icon) {
+        .admin rux-icon-micro::part(icon) {
           position: relative;
           top: -0.25rem;
           right: -0.25rem;
         }
-        .explorer rux-icon::part(icon) {
+        .explorer rux-icon-micro::part(icon) {
           position: relative;
           top: 1.5rem;
           right: 0.75rem;
