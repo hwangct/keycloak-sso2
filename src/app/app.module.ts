@@ -16,18 +16,20 @@ import { RuxIconAltitude } from '@astrouxds/astro-web-components/dist/components
 import { RuxIconPersonOutline } from '@astrouxds/astro-web-components/dist/components/rux-icon-person-outline';
 import { RuxIconAdd } from '@astrouxds/astro-web-components/dist/components/rux-icon-add';
 import { RuxIconExplicit } from '@astrouxds/astro-web-components/dist/components/rux-icon-explicit';
+import { RuxClassificationMarking } from '@astrouxds/astro-web-components/dist/components/rux-classification-marking';
 
 //import { AstroComponentsModule } from '@astrouxds/angular';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, WelcomeComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
     HttpClientModule,
     OAuthModule.forRoot(),
-    //AstroComponentsModule,
+    NavbarComponent,
+    WelcomeComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -43,5 +45,9 @@ export class AppModule {
 
     customElements.define('rux-monitoring-icon', RuxMonitoringIcon);
     customElements.define('rux-status', RuxStatus);
+    customElements.define(
+      'rux-classification-marking',
+      RuxClassificationMarking
+    );
   }
 }

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { CUSTOM_ELEMENTS_SCHEMA, Component, OnInit } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { JwksValidationHandler } from 'angular-oauth2-oidc-jwks';
 import { authConfig } from 'src/app/sso.config';
@@ -8,6 +8,9 @@ import { authConfig } from 'src/app/sso.config';
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
+  standalone: true,
+  imports: [RouterLink],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class NavbarComponent implements OnInit {
   constructor(private oauthService: OAuthService, private router: Router) {
